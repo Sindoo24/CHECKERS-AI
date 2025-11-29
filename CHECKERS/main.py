@@ -18,12 +18,9 @@ def get_row_col_from_mouse(pos):
 
 def draw_winner(text):
     font = pygame.font.SysFont("comicsans", 80)
-    # Create the text surface (Blue text)
     draw_text = font.render(text, 1, (0, 0, 255))
-    # Calculate position to center it
     x = WIDTH // 2 - draw_text.get_width() // 2
     y = HEIGHT // 2 - draw_text.get_height() // 2
-    # Draw text
     WIN.blit(draw_text, (x, y))
     pygame.display.update()
 
@@ -55,10 +52,7 @@ def main():
             else:
                 msg = "Tie Game!"
             
-            # Draw the board one last time so we see the final move
             game.update()
-            
-            # Display the message
             draw_winner(msg)
             
             # Wait 3 seconds so the player can read it, then close
@@ -66,9 +60,7 @@ def main():
             run = False
 
         
-        '''if game.winner()!=None:
-            print(game.winner())
-            run=False'''
+        
 
         for event in pygame.event.get():
             if event.type==pygame.QUIT:
@@ -78,9 +70,10 @@ def main():
                 row,col=get_row_col_from_mouse(pos)
                 game.select(row,col)
                 
-        if run: # Only update if the game is still running
+        if run: 
             game.update()
 
         game.update()
     pygame.quit()
+
 main()
