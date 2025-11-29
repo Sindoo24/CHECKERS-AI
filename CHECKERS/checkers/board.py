@@ -71,13 +71,7 @@ class Board:
                         self.BLACK_LEFT -= 1
                     else:
                         self.WHITE_LEFT -= 1
-        '''for pecie in pecies:
-            self.board[pecie.row][pecie.col]=0
-            if pecie != 0:
-                if pecie.color == BLACK:
-                    self.BLACK_LEFT -= 1
-                else:
-                    self.WHITE_LEFT -= 1'''
+        
 
     def winner(self):
         if self.BLACK_LEFT<= 0:
@@ -177,4 +171,5 @@ class Board:
 
         
         
+
                 
