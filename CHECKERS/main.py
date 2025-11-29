@@ -30,10 +30,6 @@ def main():
     run=True
     clock=pygame.time.Clock()
     game=Game(WIN)
-
-    
-
-
     while run:
         clock.tick(FPS)
 
@@ -59,9 +55,6 @@ def main():
             pygame.time.delay(3000)
             run = False
 
-        
-        
-
         for event in pygame.event.get():
             if event.type==pygame.QUIT:
                 run=False
@@ -77,3 +70,4 @@ def main():
     pygame.quit()
 
 main()
+
